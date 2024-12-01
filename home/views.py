@@ -566,3 +566,8 @@ def create_poll(request, hive_id):
         form = PollForm()
 
     return render(request, "home/create_poll.html", {"form": form, "hive": hive})
+
+
+def game_view(request, hive_id):
+    hive = get_object_or_404(Hive, id=hive_id)
+    return render(request, 'home/game.html', {'hive': hive})

@@ -39,4 +39,5 @@ urlpatterns = [
   path('hive/<int:hive_id>/create-poll/', views.create_poll, name='create_poll'),
   path('poll/<int:poll_id>/', views.poll_detail, name='poll_detail'),
   path('poll/vote/', views.submit_vote, name='submit_vote'),
+  path('hive/<int:hive_id>/game/', views.game_view, name='game'),
 ]
